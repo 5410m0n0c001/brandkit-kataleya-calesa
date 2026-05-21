@@ -338,10 +338,14 @@ body.dark-mode .botanical-border::before, body.dark-mode .botanical-border::afte
         height: auto;
     }
     .hero-side {
-        height: 45vh;
+        height: auto;
+        aspect-ratio: 16 / 9;
         flex: none;
     }
     .hero-side:hover {
         flex: none;
+    }
+    .hero-side-content {
+        padding: 1.25rem;
     }
 }
