@@ -1,0 +1,347 @@
+/* ==========================================================================
+   KATALEYA × CALESA - LUXURY EDITORIAL CSS SYSTEM
+   ========================================================================== */
+
+/* Import Premium Typography from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+    /* Brand Colors - Calesa Olive */
+    --calesa-olive: #66723E;
+    --calesa-forest: #4A5630;
+    --calesa-gold: #8C8A52;
+    --calesa-beige: #E9E1D2;
+    --calesa-ivory: #F5F1E8;
+    --calesa-earth: #6A5B4B;
+    
+    /* Brand Colors - Kataleya Orchid */
+    --kataleya-green: #4D6238;
+    --kataleya-pink: #A51C6C;
+    --kataleya-soft-pink: #D58DB3;
+    --kataleya-cream: #F5ECE3;
+    --kataleya-champagne: #D1C4CC;
+    
+    /* Base Colors */
+    --bg-light: #FDFBF7;
+    --bg-dark: #12140F;
+    --text-primary: #21251D;
+    --text-muted: #5A6252;
+    --accent: #A51C6C;
+    
+    /* Transitions */
+    --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Scrollbar for Luxury Aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--calesa-ivory);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--calesa-olive);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--kataleya-pink);
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.05em;
+}
+
+.font-script {
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Glassmorphism Classes */
+.glass-card {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(106, 91, 75, 0.06);
+}
+
+.glass-card-dark {
+    background: rgba(18, 20, 15, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-nav {
+    background: rgba(253, 251, 247, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(106, 91, 75, 0.08);
+}
+
+/* Split Hero Section */
+.hero-split-container {
+    height: 90vh;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-side {
+    flex: 1;
+    position: relative;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-side::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 2;
+    transition: var(--transition-smooth);
+}
+
+.hero-side:hover::before {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.hero-side-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    transition: var(--transition-smooth);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: var(--transition-smooth);
+    transform: scale(1.05);
+}
+
+.hero-side:hover .hero-bg {
+    transform: scale(1);
+}
+
+.hero-side:hover {
+    flex: 1.25;
+}
+
+/* Hover Micro-Animations */
+.hover-lift {
+    transition: var(--transition-fast);
+}
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(74, 86, 48, 0.12);
+}
+
+.hover-glow-pink:hover {
+    box-shadow: 0 0 25px rgba(165, 28, 108, 0.25);
+}
+
+.hover-glow-green:hover {
+    box-shadow: 0 0 25px rgba(102, 114, 62, 0.25);
+}
+
+/* Luxury Floral Frames */
+.botanical-border {
+    position: relative;
+    border: 1px solid rgba(102, 114, 62, 0.15);
+    padding: 2rem;
+}
+.botanical-border::before, .botanical-border::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--calesa-olive);
+}
+.botanical-border::before {
+    top: -5px;
+    left: -5px;
+    border-right: none;
+    border-bottom: none;
+}
+.botanical-border::after {
+    bottom: -5px;
+    right: -5px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Interactive Color Tiles */
+.color-tile {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+.color-tile::after {
+    content: 'Copiar HEX';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.65rem;
+    padding: 4px 0;
+    transition: var(--transition-fast);
+}
+.color-tile:hover::after {
+    bottom: 0;
+}
+.color-tile:hover {
+    transform: scale(1.05);
+}
+
+/* Custom Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(18, 20, 15, 0.95);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+.lightbox-img {
+    max-width: 90%;
+    max-height: 80%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lightbox.active .lightbox-img {
+    transform: scale(1);
+}
+
+/* Interactive Tabs for Style Variants */
+.style-tab-content {
+    display: none;
+}
+.style-tab-content.active {
+    display: block;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Dynamic Radial Progress Bar */
+.radial-progress-bar {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+/* Section divider vectors */
+.elegant-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(102, 114, 62, 0.2) 50%, transparent);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode Toggle support */
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: #E2E4DE;
+    --text-primary: #E2E4DE;
+    --text-muted: #A1A79B;
+}
+
+body.dark-mode .glass-card {
+    background: rgba(28, 32, 24, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .glass-nav {
+    background: rgba(18, 20, 15, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .elegant-divider {
+    background: linear-gradient(90deg, transparent, rgba(213, 141, 179, 0.2) 50%, transparent);
+}
+
+body.dark-mode .botanical-border {
+    border-color: rgba(213, 141, 179, 0.15);
+}
+
+body.dark-mode .botanical-border::before, body.dark-mode .botanical-border::after {
+    border-color: var(--kataleya-soft-pink);
+}
+
+/* Tooltips */
+.copy-tooltip {
+    position: absolute;
+    background: #222;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    z-index: 1000;
+    pointer-events: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transform: translate(-50%, -100%);
+    margin-top: -8px;
+    animation: fadeIn 0.2s ease;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .hero-split-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .hero-side {
+        height: 45vh;
+        flex: none;
+    }
+    .hero-side:hover {
+        flex: none;
+    }
+}

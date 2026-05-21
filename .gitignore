@@ -1,0 +1,9 @@
+node_modules/
+package-lock.json
+calesa_text.txt
+kataleya_text.txt
+extract-pdf.js
+extract-pdf-v2.js
+test.js
+.DS_Store
+Thumbs.db
