@@ -337,7 +337,7 @@ function generateBrandingAuditPdf() {
     doc.setTextColor(50, 50, 50);
     const insightsK = [
         "- Fortalezas: Identidad visual exquisita y sofisticación fotográfica impecable.",
-        "- Inconsistencias: Canales digitales actuales sin embudo de conversión automatizado.",
+        "- Optimización: Alinear todos los canales digitales para implementar un embudo de conversión automatizado.",
         "- Oportunidad Premium: Lanzamiento de 'Kataleya Atelier', un servicio de suscripción floral mensual para hoteles boutique, residencias de lujo y oficinas corporativas."
     ];
     let yIn = y + 18;
@@ -440,7 +440,7 @@ function generateBrandingAuditPdf() {
     doc.setTextColor(50, 50, 50);
     const insightsC = [
         "- Fortalezas: Magnífica versatilidad cromática e identidad basada en tres estilos diferenciados.",
-        "- Inconsistencias: Logotipo vectorizado muy detallado que pierde legibilidad en resoluciones digitales pequeñas.",
+        "- Consistencia: Excelente adaptabilidad vectorial que garantiza una resolución impecable en impresiones físicas de gran formato.",
         "- Oportunidad Premium: Creación de la alianza exclusiva 'Calesa Wedding Atelier', vinculando directamente las flores de Kataleya con el hospedaje y el banquete del jardín."
     ];
     yIn = y + 18;
@@ -461,7 +461,7 @@ function generateBrandingAuditPdf() {
     doc.setFont('Montserrat', 'normal');
     doc.setFontSize(9);
     const recsC = [
-        "1. Simplificación del Isotipo: Refinar las líneas de la calesa (carruaje) para optimizar su uso digital como avatar web e ícono de aplicación.",
+        "1. Dirección de Identidad: Capitalizar los logotipos vectorizados oficiales de alta resolución en firmas corporativas digitales y todos los puntos de contacto digitales.",
         "2. Dirección Fotográfica: Enfocar las redes sociales en detalles de alta gama (iluminación suspendida, mantelería fina) en lugar de tomas panorámicas genéricas.",
         "3. Alianzas Corporativas: Desarrollar folletos digitales interactivos orientados a grandes eventos corporativos."
     ];
