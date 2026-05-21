@@ -64,10 +64,10 @@
 <body class="transition-colors duration-300">
 
     <!-- 1. NAVIGATION BAR (GLASSMORPHISM) -->
-    <nav class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+    <nav class="sticky top-0 w-full z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#home" class="flex items-center space-x-2">
-                <span class="text-2xl font-serif tracking-widest text-calesa-forest dark:text-kataleya-soft-pink">KATALEYA <span class="text-sm font-light text-gray-400">×</span> CALESA</span>
+                <span class="text-xs sm:text-lg md:text-2xl font-serif tracking-wider sm:tracking-widest text-calesa-forest dark:text-kataleya-soft-pink whitespace-nowrap">KATALEYA <span class="text-[10px] sm:text-xs font-light text-gray-400">×</span> CALESA</span>
             </a>
             
             <!-- Navigation Links -->
@@ -97,12 +97,16 @@
         <div class="hero-side bg-kataleya-cream">
             <div class="hero-bg" style="background-image: url('images/kataleya_banner.png');"></div>
             <div class="hero-side-content">
-                <span class="text-[10px] md:text-xs uppercase tracking-widest text-pink-200">Arte Botánico & Elegancia</span>
-                <h1 class="text-3xl sm:text-4xl md:text-6xl font-serif mt-1 md:mt-2 mb-3 md:mb-4 tracking-wider">Kataleya</h1>
-                <p class="max-w-md mx-auto text-xs md:text-sm font-light text-gray-200 mb-4 md:mb-6 hidden sm:block">Feminidad sofisticada, diseños únicos y arreglos florales exclusivos que crean experiencias memorables.</p>
-                <div class="flex flex-wrap justify-center gap-2 md:gap-3">
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-pink-200 hidden md:inline-block">Arte Botánico & Elegancia</span>
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-serif mt-1 md:mt-2 mb-3 md:mb-4 tracking-wider hidden md:block">Kataleya</h1>
+                <p class="max-w-md mx-auto text-xs md:text-sm font-light text-gray-200 mb-4 md:mb-6 hidden md:block">Feminidad sofisticada, diseños únicos y arreglos florales exclusivos que crean experiencias memorables.</p>
+                <div class="hidden md:flex flex-wrap justify-center gap-2 md:gap-3">
                     <a href="#kataleya" class="inline-block px-4 py-2 md:px-6 md:py-3 bg-kataleya-pink text-white text-[10px] md:text-xs uppercase tracking-widest hover:bg-opacity-95 transition-all">Ver Identidad</a>
                     <a href="downloads/Kataleya_BrandKit.pdf" download class="inline-block px-4 py-2 md:px-6 md:py-3 border border-white text-white text-[10px] md:text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all"><i class="fas fa-download mr-1"></i> Brand Kit</a>
+                </div>
+                <!-- Clean Mobile-only Explore CTA Centered -->
+                <div class="md:hidden flex justify-center mt-2">
+                    <a href="#kataleya" class="inline-block px-6 py-3 bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] uppercase tracking-widest hover:bg-white hover:text-black font-semibold transition-all rounded-full shadow-lg">Explorar Kataleya</a>
                 </div>
             </div>
         </div>
@@ -111,12 +115,16 @@
         <div class="hero-side bg-calesa-beige">
             <div class="hero-bg" style="background-image: url('images/calesa_banner.png');"></div>
             <div class="hero-side-content">
-                <span class="text-[10px] md:text-xs uppercase tracking-widest text-green-200">Naturaleza, Tradición & Exclusividad</span>
-                <h1 class="text-3xl sm:text-4xl md:text-6xl font-serif mt-1 md:mt-2 mb-3 md:mb-4 tracking-wider">Calesa</h1>
-                <p class="max-w-md mx-auto text-xs md:text-sm font-light text-gray-200 mb-4 md:mb-6 hidden sm:block">Un jardín de eventos extraordinario donde la elegancia clásica y la naturaleza se unen en celebraciones inolvidables.</p>
-                <div class="flex flex-wrap justify-center gap-2 md:gap-3">
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-green-200 hidden md:inline-block">Naturaleza, Tradición & Exclusividad</span>
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-serif mt-1 md:mt-2 mb-3 md:mb-4 tracking-wider hidden md:block">Calesa</h1>
+                <p class="max-w-md mx-auto text-xs md:text-sm font-light text-gray-200 mb-4 md:mb-6 hidden md:block">Un jardín de eventos extraordinario donde la elegancia clásica y la naturaleza se unen en celebraciones inolvidables.</p>
+                <div class="hidden md:flex flex-wrap justify-center gap-2 md:gap-3">
                     <a href="#calesa" class="inline-block px-4 py-2 md:px-6 md:py-3 bg-calesa-olive text-white text-[10px] md:text-xs uppercase tracking-widest hover:bg-opacity-95 transition-all">Ver Espacios</a>
                     <a href="downloads/Calesa_BrandKit.pdf" download class="inline-block px-4 py-2 md:px-6 md:py-3 border border-white text-white text-[10px] md:text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all"><i class="fas fa-download mr-1"></i> Brand Kit</a>
+                </div>
+                <!-- Clean Mobile-only Explore CTA Centered -->
+                <div class="md:hidden flex justify-center mt-2">
+                    <a href="#calesa" class="inline-block px-6 py-3 bg-white/20 backdrop-blur-md border border-white/30 text-white text-[11px] uppercase tracking-widest hover:bg-white hover:text-black font-semibold transition-all rounded-full shadow-lg">Explorar Calesa</a>
                 </div>
             </div>
         </div>
