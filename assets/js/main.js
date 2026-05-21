@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 8. ZIP Download Notification
     initZipTrigger();
+
+    // 9. Interactive Bank Details Copy
+    initBankCopier();
 });
 
 /**
@@ -509,4 +512,24 @@ function initZipTrigger() {
             showToast('Preparando descarga de paquete de marca consolidado (.ZIP)...');
         });
     }
+}
+
+/**
+ * Micro-Interaction: Copy Bank details to Clipboard
+ */
+function initBankCopier() {
+    const copyBtns = document.querySelectorAll('.copy-bank-btn');
+    copyBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const text = btn.getAttribute('data-value');
+            const label = btn.getAttribute('data-label');
+            if (text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast(`¡${label} copiado al portapapeles!`);
+                }).catch(err => {
+                    console.error('Could not copy bank detail: ', err);
+                });
+            }
+        });
+    });
 }
